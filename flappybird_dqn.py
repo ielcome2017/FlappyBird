@@ -117,7 +117,7 @@ class Game(QtCore.QObject):
         # self.render(im)
         self._draw(im)
         self.sign_step.emit(im)
-        return [np.array(Image.fromqimage(im)), reward, terminal, self.score]
+        return [Image.fromqimage(im), reward, terminal, self.score]
 
     
     def _update_pip_rect(self):
@@ -222,7 +222,7 @@ class GamePainter(QWidget):
     def paintEvent(self, e: QPaintEvent):
         if self.current_im is None:
             return 
-        p = QPainter(self)
+        p = QPainter()
         p.begin(self)
         p.drawPixmap(self.rect(), self.current_im)
         p.end()
@@ -257,7 +257,7 @@ class Main(QWidget):
             
         @robust
         def paintEvent(self, e: QPaintEvent):
-            p = QPainter(self)
+            p = QPainter()
             p.begin(self)
             p.drawPixmap(self.rect(), self.img_scoreboard)
 
@@ -290,15 +290,19 @@ class Main(QWidget):
 
         self.game.sign_step.connect(self.game_painter.frame_step)
         self.game.sign_score.connect(self.scoreboard.set_value)
-        th = threading.Thread(target=self.run)
-        th.setDaemon(True)
-        th.start()
 
+        # self.run()
 
     def run(self):
+        th = threading.Thread(target=self.run_event)
+        th.setDaemon(True)
+        th.start()
+    
+    def run_event(self):
         for i in range(1000):
             act = np.random.randint(0, 1, size=[2])
-            self.game.frame_step(act)
+            im, _, _, _ = self.game.frame_step(act)
+            print(i)
 
     @robust
     def keyPressEvent(self, e: QKeyEvent):
