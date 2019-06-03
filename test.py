@@ -219,7 +219,7 @@ class GameState:
 
     def check_crash(self, player: Player, up_pipes, low_pipes):
         pi = player.index
-        if player.y + player.width > self.base.y - 1:
+        if player.y + player.height > self.base.y - 1:
             return True
         player_rect = pygame.Rect(player.x, player.y, player.width, player.height)
         for u, l in zip(up_pipes, low_pipes):
@@ -252,8 +252,6 @@ class GameState:
                 if hitmask1[x1+x][y1+y] and hitmask2[x2+x][y2+y]:
                     return True
         return False
-
-
 
 
 # In[ ]:
