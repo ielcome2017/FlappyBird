@@ -1,3 +1,6 @@
+# libpng warning: iCCP: known incorrect sRGB profile
+# 该问题解决方案
+
 import cv2, os
 from PyQt5.QtGui import QImage
 

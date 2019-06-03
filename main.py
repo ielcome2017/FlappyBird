@@ -15,17 +15,12 @@ class Flappybird(object):
 def run():
     for i in range(1000):
         im, _, _, _ = flappy.form.game.frame_step([0, 1])
-        print(im)
 
 flappy = Flappybird()
 
-# th = threading.Thread(target=run)
-# th.setDaemon(True)
-# th.start()
-im, _, _, _ = flappy.form.game.frame_step([0, 1])
-im :Image.Image = im.resize([80, 80])
-im.save("1.png")
-print(im.size)
+th = threading.Thread(target=run)
+th.setDaemon(True)
+th.start()
 
 flappy.run()
 # im, _, _, _ = flappy.form.game.frame_step([0, 1])
