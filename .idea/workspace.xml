@@ -2,38 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd6c885b-a725-4e13-bf27-08346849103f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/control.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/element.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/net.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/play.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/FlappyBird.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FlappyBird.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qlearn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rgan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/记录.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/test-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/background-black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/base.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/pipe-green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/redbird-downflap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/redbird-midflap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sprites - 副本/redbird-upflap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flappybird.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flappybird_dqn.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flappybird_pygame.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bak/weight_00_30_.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/transform.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/视频.py" beforeDir="false" afterPath="$PROJECT_DIR$/视频.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/weight_00_01_.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/weight_01_01_.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/weight_01_02_.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/weight_03_01_.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/weight_03_02_.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/weight_05_01_.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/weight_05_02_.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/net.py" beforeDir="false" afterPath="$PROJECT_DIR$/net.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/31005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/32005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/33005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/34005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/35005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/36005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/37005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/38005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/39005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/play.py" beforeDir="false" afterPath="$PROJECT_DIR$/play.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +40,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Unit Test" />
+        <option value="Python Stub" />
         <option value="Python Script" />
       </list>
     </option>
@@ -63,10 +60,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/data.py" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -75,49 +73,7 @@
       <recent name="D:\Project\FlappyBird" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="agent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FlappyBird" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/agent.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="agent_h5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FlappyBird" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\Project\FlappyBird\agent_h5.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests for test.MyTestCase.test_play">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FlappyBird" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,7 +95,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_h.MyTestCase.test_read" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="store" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FlappyBird" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="D:\Project\FlappyBird\data\store.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test.MyTestCase.test_h5" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="FlappyBird" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -149,21 +126,52 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_h.MyTestCase.test_read&quot;" />
+      <option name="_new_target" value="&quot;test.MyTestCase.test_h5&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test.MyTestCase.test_play" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="FlappyBird" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.MyTestCase.test_play&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test.MyTestCase.test_random" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="FlappyBird" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.MyTestCase.test_random&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python tests.Unittests for test_h.MyTestCase.test_read" />
-      <item itemvalue="Python.agent" />
+      <item itemvalue="Python tests.Unittests for test.MyTestCase.test_h5" />
+      <item itemvalue="Python tests.Unittests for test.MyTestCase.test_random" />
+      <item itemvalue="Python tests.Unittests for test.MyTestCase.test_play" />
+      <item itemvalue="Python.store" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for test.MyTestCase.test_play" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.agent" />
-        <item itemvalue="Python.agent_h5" />
-        <item itemvalue="Python tests.Unittests for test_h.MyTestCase.test_read" />
+        <item itemvalue="Python.store" />
+        <item itemvalue="Python tests.Unittests for test.MyTestCase.test_h5" />
+        <item itemvalue="Python tests.Unittests for test.MyTestCase.test_random" />
       </list>
     </recent_temporary>
   </component>
@@ -184,6 +192,21 @@
       <workItem from="1559108247696" duration="250000" />
       <workItem from="1559299536014" duration="342000" />
     </task>
+    <task id="LOCAL-00001" summary="懒得写">
+      <created>1584892537914</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584892537914</updated>
+    </task>
+    <task id="LOCAL-00002" summary="懒得写">
+      <created>1584892608526</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584892608526</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -192,70 +215,90 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="懒得写" />
+    <option name="LAST_COMMIT_MESSAGE" value="懒得写" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Inspections" timestamp="1585191251526">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1585191251526" />
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584887313943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584887313943" />
-    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584595596977">
+    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585390797495">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584595596977" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584875697913">
+    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585390797495" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585128706424">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584875697913" />
-    <state x="598" y="113" key="CommitChangelistDialog2" timestamp="1584892537067">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585128706424" />
+    <state x="598" y="113" key="CommitChangelistDialog2" timestamp="1584892607602">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584892537067" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1584842262268">
+    <state x="598" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584892607602" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1585488380882">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584842262268" />
-    <state width="1899" height="317" key="GridCell.Tab.0.bottom" timestamp="1584892542726">
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585488380882" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585488196888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="317" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584892542726" />
-    <state width="1899" height="317" key="GridCell.Tab.0.center" timestamp="1584892542726">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585488196888" />
+    <state width="1899" height="368" key="GridCell.Tab.0.bottom" timestamp="1585574542000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="317" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584892542726" />
-    <state width="1899" height="317" key="GridCell.Tab.0.left" timestamp="1584892542726">
+    <state width="1899" height="368" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585574542000" />
+    <state width="1899" height="368" key="GridCell.Tab.0.center" timestamp="1585574542000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="317" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584892542726" />
-    <state width="1899" height="317" key="GridCell.Tab.0.right" timestamp="1584892542726">
+    <state width="1899" height="368" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585574542000" />
+    <state width="1899" height="368" key="GridCell.Tab.0.left" timestamp="1585574542000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="317" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584892542726" />
-    <state width="1899" height="321" key="GridCell.Tab.1.bottom" timestamp="1584881282241">
+    <state width="1899" height="368" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585574542000" />
+    <state width="1899" height="368" key="GridCell.Tab.0.right" timestamp="1585574542000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="321" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584881282241" />
-    <state width="1899" height="321" key="GridCell.Tab.1.center" timestamp="1584881282240">
+    <state width="1899" height="368" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585574542000" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1585185659657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="321" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584881282240" />
-    <state width="1899" height="321" key="GridCell.Tab.1.left" timestamp="1584881282240">
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585185659657" />
+    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1585185659657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="321" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584881282240" />
-    <state width="1899" height="321" key="GridCell.Tab.1.right" timestamp="1584881282240">
+    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585185659657" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1585185659657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="321" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584881282240" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1584760275513">
+    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585185659657" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1585185659657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584760275513" />
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584842254032">
+    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585185659657" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1585105784010">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584842254032" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584760818124">
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585105784010" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585535025347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584760818124" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585535025347" />
+    <state x="575" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585056892899">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="575" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585056892899" />
+    <state x="701" y="162" key="refactoring.ChangeSignatureDialog" timestamp="1584965154191">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="701" y="162" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584965154191" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585385017657">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585385017657" />
   </component>
 </project>

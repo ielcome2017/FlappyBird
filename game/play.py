@@ -1,8 +1,7 @@
 import pygame
-from element import Element, PlayElement, PipeElement, ScoreElement
-from control import Control
+from game.element import Element, PlayElement, PipeElement, ScoreElement
+from game.control import Control
 import numpy as np
-
 
 
 class Game:
@@ -41,7 +40,6 @@ class Game:
         self.control, self.state = self.register()
         return -1
 
-
     def frame_step(self, actions):
         self.screen.blit(self.background.image, self.background.info)
         self.screen.blit(self.player.image, self.player.info)
@@ -73,40 +71,6 @@ class Game:
         image_data = pygame.surfarray.array3d(pygame.display.get_surface())
         return image_data, reward, int(terminal)
 
-
-def run():
-    game = Game()
-    try:
-        while True:
-            b = [1, 0]
-            for e in pygame.event.get():
-                if e.type == pygame.QUIT:
-                    pygame.quit()
-                if e.type == pygame.KEYDOWN:
-                    if e.key == pygame.K_UP:
-                        b = np.array([0, 1])
-            d, r, t = game.frame_step(b)
-            yield d, r, t
-    except pygame.error:
-        pygame.quit()
-
-
-if __name__ == '__main__':
-    import h5py
-    from PIL import Image
-    data = h5py.File("test.h5", "w")
-    writer = data.create_dataset("state", shape=[50000, 80, 80], maxshape=[None, 80, 80], dtype="f")
-    start, end = 0, 0
-    tmp = np.empty([100, 80, 80])
-    for state, reward, terminal in run():
-        ind = (end + 1) % 100
-        tmp[ind] = Image.fromarray(state).resize([80, 80]).convert("L")
-        end += 1
-        if ind == 0:
-            print("writer")
-            writer[start: end] = tmp
-            tmp = np.empty([100, 80, 80])
-            start = end
 
 
 

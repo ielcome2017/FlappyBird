@@ -71,11 +71,11 @@ class PlayElement:
 
 class PipeElement:
     def __init__(self, x, offset):
-        self.down = Element("assets/sprites/pipe-green.png", x)
+        self.down = Element("../assets/sprites/pipe-green.png", x)
         offset_y = 0.2*offset - np.random.randint(2, 10) * 10 - self.down.image.get_height()
         self.down.move(0, -offset_y)
 
-        self.up = Element("assets/sprites/pipe-green.png", x, rotate=True)
+        self.up = Element("../assets/sprites/pipe-green.png", x, rotate=True)
         offset_y = self.down.y - 100 - self.up.image.get_height()
         self.up.move(0, offset_y)
 

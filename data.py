@@ -1,84 +1,78 @@
-import os
-import time
+import numpy as np
+# import minpy.numpy as np
+import threading
+import sys
+import cv2
+import pygame
+import random
 from collections import deque
 
-from PIL import Image
-from tensorflow import keras
+from game.play import Game
 
-from net import *
-from play import *
-
-GAMMA = 0.99
-TIME_STEP = 4
-STATE_SHAPE = [80, 80, TIME_STEP]
-ACTION_DIM = 2
-BATCH_SIZE = 32
-
-MAX_LENGTH = 5000
-
-OBSERVER = 128
-EXPLORE = 3000000
-
-PLAY_STEP = 1000
-
-def convert(x):
-    # x = cv2.cvtColor(cv2.resize(x, (80, 80)), cv2.COLOR_BGR2GRAY)
-    # ret, x = cv2.threshold(x, 1, 255, cv2.THRESH_BINARY)
-    x = Image.fromarray(x).resize(STATE_SHAPE[:2]).convert("L")
-    x = np.array(x) < 1
-    x = x.astype("int")
-    return x.reshape([*STATE_SHAPE[:2], 1])
+IMAGE_SHAPE = (80, 80)
 
 
-class Dataset():
-    def __init__(self, train_net):
+def convert(img):
+    img = cv2.cvtColor(cv2.resize(img, IMAGE_SHAPE), cv2.COLOR_BGR2GRAY)
+    ret, img = cv2.threshold(img, 1, 255, cv2.THRESH_BINARY)
+    return np.array(img) / 255.
 
-        file = os.listdir("model")
-        if len(file) > 0:
-            file = file[-1]
-            filename = "model/" + file
-            print(filename)
-            train_net.load_weights(filename)
-            count = (int(file.split("_")[1]) + int(file.split("_")[2]))* 10000
-        else:
-            count = 0
+
+class Memory:
+    def __init__(self):
+        self.length = 0
+        self.max_length = 50000
+        self.D = deque(maxlen=self.max_length)
+
+    def memory_append(self, state, next_state, action, reward, terminal):
+        if len(self.D) > self.max_length:
+            self.D.popleft()
+        self.D.append([state, next_state, action, reward, terminal])
+
+
+class GameMemory(Memory):
+    def __init__(self, func, count):
         self.count = count
-        self.model = keras.Model(train_net.input[0], train_net.layers[-3].output)
-        self.model.summary()
+        self.func = func
 
-        self.func = keras.backend.function(train_net.input[0], train_net.layers[-3].output)
+        self.explore = 3000000
+        self.observer = 10000
+        self.time_step = 4
+        self.image_shape = (80, 80)
+        self.pre_step_epoch = 10000
+        super().__init__()
 
-        # self.game = Game()
+        assert self.observer < self.max_length
+
+        self.train = True
+        th = threading.Thread(target=self.generator)
+        th.start()
 
     def generator(self):
-        init_epsilon, final_epsilon = 0.1, 0.001
-        epsilon = init_epsilon
-
+        # 参数设置
+        epsilon, init_epsilon, final_epsilon = 0.1, 0.1, 0.001
+        action_dim = 2
+        # 初始化
         game = Game()
-
-        current_action = np.array([0, 1])
+        current_action = np.array([1, 0])
         image, reward, terminal = game.frame_step(current_action)
         image = convert(image)
-        current_state = np.concatenate([image for i in range(TIME_STEP)], axis=2)
 
-        position = 0
-        epsilon -= max(self.count - OBSERVER, 0) * (init_epsilon - final_epsilon) / EXPLORE
+        epsilon -= max(self.count * self.pre_step_epoch - self.observer, 0) * \
+                   (init_epsilon - final_epsilon) / self.explore
 
+        # 获取当前状态
+        state = np.stack([image for _ in range(4)], axis=-1)
         try:
             while True:
-                # 随机动作
-                if np.random.random() < epsilon:
-                    action_ind = np.random.randint(0, ACTION_DIM)
+                # 获取动作
+                if random.random() < epsilon:
+                    action_ind = np.random.randint(0, action_dim)
                 else:
-                    state = np.expand_dims(current_state, axis=0)
-                    action_ind = self.func(state).argmax(-1).astype("int")
+                    action_ind = self.func(state[np.newaxis, :]).argmax(-1).astype("int")[0]
 
-                # 越到后期，随机越少
-                epsilon -= (init_epsilon - final_epsilon) / EXPLORE if epsilon > final_epsilon and self.count > OBSERVER else 0
-
-                # 开启辅助训练窗口
-                # action_ind = 0 if position < PLAY_STEP else action_ind
-                position += 1
+                epsilon -= (init_epsilon - final_epsilon) / self.explore \
+                    if epsilon > final_epsilon and self.length > self.observer else 0
                 for e in pygame.event.get():
                     if e.type == pygame.QUIT:
                         pygame.quit()
@@ -86,50 +80,43 @@ class Dataset():
                     if e.type == pygame.KEYDOWN:
                         if e.key == pygame.K_UP:
                             action_ind = 1
+                action = np.zeros(2)
+                action[action_ind] = 1
+                image, reward, terminal = game.frame_step(action)
+                image = convert(image)  # 80*80
 
-                # 获取动作
-                current_action = np.zeros(2)
-                current_action[action_ind] = 1
-                image, reward, terminal = game.frame_step(current_action)
-                image = convert(image)
-                next_state = np.concatenate([image, current_state[:, :, :TIME_STEP-1]], axis=2)
-
-                yield current_state, next_state,[*current_action, reward, terminal]
-                current_state = next_state
-                self.count += 1
-
+                next_state = np.zeros_like(state.squeeze())
+                if terminal > 0:
+                    next_state[:, :, 1:] = state[:, :, :3]
+                    next_state[:, :, 0] = image[np.newaxis, :, :]
+                else:
+                    next_state = np.stack([image for _ in range(4)], axis=-1)
+                self.memory_append(state, next_state, action, reward, terminal)
+                state = next_state
         except pygame.error:
-            print("\n-----game close----")
+            self.train = False
+            print("\n================> game close <=================")
 
-    def next_data(self):
-        q = deque(maxlen=MAX_LENGTH)
-        for data in self.generator():
-
-            q.append(data)
-            if not self.count > OBSERVER or len(q) < BATCH_SIZE:
+    def next_data(self, batch_size=32):
+        gamma = 0.99
+        # 根据已经获取的长度偏移
+        while True:
+            if not self.train:
+                break
+            if len(self.D) < self.observer:
+                sys.stdout.write("\r num of sample is : %d/%d" % (len(self.D), self.observer))
+                sys.stdout.flush()
                 continue
+
             # 抽取数据训练
-            num_sample = len(q) // 2 if len(q) > 64*2 else len(q)
-            batch_ind = np.random.choice(np.arange(num_sample), BATCH_SIZE, replace=False)
+            batch = random.sample(self.D, batch_size)
+            state, next_state, action, reward, terminal = zip(*batch)
+            state = np.stack(state, axis=0)
+            next_state = np.stack(state, axis=0)
+            action = np.stack(action, axis=0)
+            reward = np.stack(reward, axis=0)
+            terminal = np.stack(terminal, axis=0)
 
-            batch_current_state = np.stack([q[i][0] for i in batch_ind], axis=0)
-            batch_next_state = np.stack([q[i][1] for i in batch_ind],  axis=0)
-            batch_art = np.stack([q[i][2] for i in batch_ind], axis=0)
-
-            batch_action = batch_art[:, 0:2]
-            batch_reward = batch_art[:, -2]
-            batch_terminal = batch_art[:, -1]
-
-            out = self.func(batch_next_state).max(-1)
-            batch_reward = np.clip((batch_reward - 0.105) * 200, a_max=100, a_min=-100)
-            batch_y = batch_reward + GAMMA * out * (1 - batch_terminal)
-            yield [batch_current_state, batch_action], batch_y
-
-
-if __name__ == '__main__':
-    stime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-    net = Net()
-
-    data = Dataset(net).next_data()
-
-    net.fit(data, steps_per_epoch=10000, epochs=300)
+            out = self.func(next_state).max(-1)
+            batch_y = reward + gamma * out * (1 - terminal)
+            yield [state, action], batch_y
