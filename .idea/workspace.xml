@@ -2,39 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd6c885b-a725-4e13-bf27-08346849103f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/qlearn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rgan.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/记录.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/play.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bak/weight_00_30_.h5" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/store.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/control.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/control.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/element.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/element.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/play.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/weight_00_01_.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/weight_01_01_.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/weight_01_02_.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/weight_03_01_.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/weight_03_02_.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/weight_05_01_.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/weight_05_02_.h5" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/net.py" beforeDir="false" afterPath="$PROJECT_DIR$/net.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/31005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/32005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/33005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/34005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/35005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/36005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/37005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/38005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/39005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/play.py" beforeDir="false" afterPath="$PROJECT_DIR$/play.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -46,6 +45,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZEuCnHACDTbHNS80JYi6CvgaG0" />
@@ -59,21 +63,51 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ToolWindowDuplicates.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/data.py" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FirstPro" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/data.py" />
+    <property name="settings.editor.selected.configurable" value="PyScientificConfigurable" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/agent.py" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Project\FlappyBird\model" />
-      <recent name="D:\Project\FlappyBird\bak" />
       <recent name="D:\Project\FlappyBird" />
+      <recent name="D:\Project\FlappyBird\game" />
+      <recent name="D:\Project\FlappyBird\model" />
+      <recent name="D:\Project\FlappyBird\NETV2" />
+      <recent name="D:\Project\FlappyBird\NETV1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test.MyTestCase.test_play">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="element" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FlappyBird" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/game" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/game/element.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FlappyBird" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -86,6 +120,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -95,7 +130,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="store" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="net" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FlappyBird" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -107,7 +142,8 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\Project\FlappyBird\data\store.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/net.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,62 +152,64 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test.MyTestCase.test_h5" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="play" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FlappyBird" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test.MyTestCase.test_h5&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\Project\FlappyBird\play.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test.MyTestCase.test_play" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FlappyBird" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test.MyTestCase.test_play&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for test.MyTestCase.test_random" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="FlappyBird" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test.MyTestCase.test_random&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.element" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python tests.Unittests for test.MyTestCase.test_h5" />
-      <item itemvalue="Python tests.Unittests for test.MyTestCase.test_random" />
-      <item itemvalue="Python tests.Unittests for test.MyTestCase.test_play" />
-      <item itemvalue="Python.store" />
+      <item itemvalue="Python.net" />
+      <item itemvalue="Python.play" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for test.MyTestCase.test_play" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.store" />
-        <item itemvalue="Python tests.Unittests for test.MyTestCase.test_h5" />
-        <item itemvalue="Python tests.Unittests for test.MyTestCase.test_random" />
+        <item itemvalue="Python.play" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.net" />
+        <item itemvalue="Python.element" />
       </list>
     </recent_temporary>
   </component>
@@ -191,6 +229,11 @@
       <workItem from="1559108161777" duration="60000" />
       <workItem from="1559108247696" duration="250000" />
       <workItem from="1559299536014" duration="342000" />
+      <workItem from="1585743648783" duration="895000" />
+      <workItem from="1585744899299" duration="13185000" />
+      <workItem from="1585792962981" duration="15076000" />
+      <workItem from="1585819263026" duration="6609000" />
+      <workItem from="1585887646229" duration="5166000" />
     </task>
     <task id="LOCAL-00001" summary="懒得写">
       <created>1584892537914</created>
@@ -206,11 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1584892608526</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="懒得写">
+      <created>1585574686098</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585574686098</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1607000" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -224,46 +271,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1585191251526" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584887313943">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585747417010">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584887313943" />
-    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585390797495">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585747417010" />
+    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585746915148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585390797495" />
+    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585746915148" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585128706424">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585128706424" />
-    <state x="598" y="113" key="CommitChangelistDialog2" timestamp="1584892607602">
+    <state x="800" y="409" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1585889735925">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584892607602" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1585488380882">
+    <state x="800" y="409" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585889735925" />
+    <state x="668" y="132" key="#main" timestamp="1585743660834">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585488380882" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585488196888">
+    <state x="668" y="132" key="#main/0.0.1920.1040@0.0.1920.1040" timestamp="1585743660834" />
+    <state x="598" y="113" key="CommitChangelistDialog2" timestamp="1585574685107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585488196888" />
-    <state width="1899" height="368" key="GridCell.Tab.0.bottom" timestamp="1585574542000">
+    <state x="598" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585574685107" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1585796521377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="368" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585574542000" />
-    <state width="1899" height="368" key="GridCell.Tab.0.center" timestamp="1585574542000">
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585796521377" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585824243279">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="368" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585574542000" />
-    <state width="1899" height="368" key="GridCell.Tab.0.left" timestamp="1585574542000">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585824243279" />
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom" timestamp="1585893062432">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="368" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585574542000" />
-    <state width="1899" height="368" key="GridCell.Tab.0.right" timestamp="1585574542000">
+    <state width="1877" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585893062432" />
+    <state width="1877" height="260" key="GridCell.Tab.0.center" timestamp="1585893062432">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="368" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585574542000" />
+    <state width="1877" height="260" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585893062432" />
+    <state width="1877" height="260" key="GridCell.Tab.0.left" timestamp="1585893062431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="260" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585893062431" />
+    <state width="1877" height="260" key="GridCell.Tab.0.right" timestamp="1585893062432">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="260" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585893062432" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1585185659657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -280,25 +335,39 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585185659657" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1585105784010">
+    <state x="802" y="155" key="SettingsEditor" timestamp="1585747325484">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585105784010" />
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585535025347">
+    <state x="802" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585747325484" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585887661000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585535025347" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585887661000" />
     <state x="575" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585056892899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="575" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585056892899" />
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585754025558">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="752" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585754025558" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1585754187368">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585754187368" />
     <state x="701" y="162" key="refactoring.ChangeSignatureDialog" timestamp="1584965154191">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="162" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584965154191" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585385017657">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585799649115">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585385017657" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585799649115" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FlappyBird$test.coverage" NAME="test Coverage Results" MODIFIED="1585797329231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlappyBird$play.coverage" NAME="play Coverage Results" MODIFIED="1585803132712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlappyBird$main.coverage" NAME="main Coverage Results" MODIFIED="1585893062425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlappyBird$net.coverage" NAME="net Coverage Results" MODIFIED="1585797261307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

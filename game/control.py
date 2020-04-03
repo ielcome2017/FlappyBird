@@ -10,7 +10,7 @@ class Control:
 
     def attach(self, observe):
         if len(self.observes) >= self.max_observe:
-            self.observes.pop(1)
+            self.observes.pop(1)    # 0为self.base 不能移除
         self.observes.append(observe)
 
     def notify(self, actions):
@@ -20,5 +20,4 @@ class Control:
         for observe in self.observes:
             state = np.logical_or(state, observe.update(self.player))
         self.scoreboard.update(int(state[-1]))
-        # print(state)
         return state

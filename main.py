@@ -1,76 +1,39 @@
-
-from data import GameMemory
-# from agent import GameMemory
-from net import Net
-import matplotlib.pyplot as plt
+from agent import GameMemory
+# from data import GameMemory
 import keras
+from net import NetV1, NetV2
 import os
-import numpy as np
 
 EPOCHS = 400
 STEPS_PER_EPOCH = 10000
+PATH = ["NETV1/", "NETV2/"]
 
 
-class Draw(keras.callbacks.Callback):
-
-    def __init__(self, *args, **kwargs):
-        super(Draw, self).__init__(*args, **kwargs)
-        self.x, self.y = [], []
-        fig = plt.figure()
-        self.ax = fig.add_subplot(1, 1, 1)
-        self.line, = plt.plot([], [])
-
-    def on_batch_end(self, batch, logs=None):
-        loss = logs.get("loss")
-        self.x.append(batch)
-        self.y.append(loss)
-        self.ax.set_xlim(self.x[0], self.x[-1])
-        self.ax.set_ylim(0, max(self.y))
-        if len(self.y) > 100:
-            self.y.pop(0)
-            self.x.pop(0)
-
-        self.line.set_data(self.x, self.y)
-        plt.pause(0.001)
-
-
-def get_count(train_net):
-    if len(os.listdir("model")) == 0:
-        return train_net, 0
-    counts = [int(file.split(".")[1]) for file in os.listdir("model")]
+def get_net(net_version):
+    if net_version == 0:
+        train_net, path = NetV1(), "NETV1/"
+    else:
+        train_net, path = NetV2(), "NETV2/"
+    print(path)
+    if len(os.listdir(path)) == 0:
+        return 0
+    counts = [int(file.split(".")[1]) for file in os.listdir(path)]
     count = max(counts)
-    filename = "model/weight.%02d.h5" % count
 
+    filename = path + "weight.%02d.h5" % count
     train_net.load_weights(filename)
-    return train_net, count
+    call_function = [
+        keras.callbacks.ModelCheckpoint(filepath=path + "weight.{epoch:02d}.h5")]
+    return train_net, call_function, count
 
 
 def train():
-    net = Net()
-    # predict_net = Net(False, trainable=False)
-    # get_count(predict_net)
-    # func = keras.Model(predict_net.input[0], predict_net.layers[-3].output).predict
-    # func = keras.backend.function(predict_net.input[0], predict_net.layers[-3].output)
+    net, call_function, count = get_net(net_version=1)
     func = keras.backend.function(net.input[0], net.layers[-2].output)
+    agent = GameMemory(func, count, "train")
 
-    net, count = get_count(net)
-    reader = GameMemory(func, count)
-    data = reader.next_data()
-
-    ckpt = [
-        keras.callbacks.ModelCheckpoint(
-            filepath="model/weight.{epoch:02d}.h5",
-            monitor="loss",
-            mode="min",
-            verbose=1),
-        # PredWeight(predict_net)
-    ]
-
-    # draw = Draw()
-    # try:
-    net.fit(data, epochs=EPOCHS, initial_epoch=reader.count, steps_per_epoch=STEPS_PER_EPOCH, callbacks=ckpt)
-    # except Exception as e:
-    #     print("\n================> train  stop <=================")
+    net.fit(agent.next_data(), epochs=EPOCHS, initial_epoch=agent.count,
+                steps_per_epoch=STEPS_PER_EPOCH, callbacks=call_function)
 
 
 if __name__ == '__main__':
