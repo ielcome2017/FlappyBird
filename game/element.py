@@ -1,5 +1,5 @@
-import pygame
 import numpy as np
+from game.engine import load_image, flip, get_mask
 
 
 def check_crash(player, element):
@@ -11,12 +11,12 @@ def check_crash(player, element):
 
 class Element:
     def __init__(self, filename, x=0, y=0, rotate=False, other=0):
-        self.image = pygame.image.load(filename).convert_alpha()
+        self.image = load_image(filename)
         if rotate:
-            self.image = pygame.transform.flip(self.image, True, True)
+            self.image = flip(self.image)
         self.x = x
         self.y = y
-        self.mask = pygame.mask.from_surface(self.image)
+        self.mask = get_mask(self.image)
 
         self.info = (self.x, self.y)
         self.other = other
@@ -45,11 +45,11 @@ class PlayElement:
     def __init__(self, x, y, bottom):
         # 加载资源
         self.images = [
-            pygame.image.load("assets/sprites/redbird-upflap.png").convert_alpha(),
-            pygame.image.load("assets/sprites/redbird-midflap.png").convert_alpha(),
-            pygame.image.load("assets/sprites/redbird-downflap.png").convert_alpha()
+            load_image("assets/sprites/redbird-upflap.png"),
+            load_image("assets/sprites/redbird-midflap.png"),
+            load_image("assets/sprites/redbird-downflap.png")
         ]
-        self.masks = [pygame.mask.from_surface(s) for s in self.images]
+        self.masks = [get_mask(s) for s in self.images]
         self.data = self.generator()    # 生成图像
         self.image, self.mask = next(self.data)
 

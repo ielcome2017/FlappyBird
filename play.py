@@ -1,43 +1,29 @@
-import pygame
+from game.engine import Display, convert_data, GameOver
 from game.element import Element, PlayElement, PipeElement, ScoreElement, BaseElement
 from game.control import Control
 import numpy as np
 
 
-def get_event(ind):
-    """
-    :param ind: 为电脑默认或者AI操作，但是键盘案件操作优先，因此以下响应时该项会被覆盖
-    :return: 返回动作索引，若出现键盘事件则覆盖之前
-    """
-    for e in pygame.event.get():
-        if e.type == pygame.QUIT:
-            pygame.quit()
-            break
-        if e.type == pygame.KEYDOWN:
-            if e.key == pygame.K_UP:
-                ind = 1
-    return ind
-
-
 class Game:
-    def __init__(self):
-        pygame.init()
+    def __init__(self, num=1):
+        self.display = Display()
         self.width, self.height = 288, 512  # 定义游戏界面大小
-        self.screen = pygame.display.set_mode((self.width, self.height))
-        pygame.display.set_caption('Flappy Bird')
-        self.fps = 30   # 定义游戏的fps
-        self.clock = pygame.time.Clock()   # 游戏时钟
+        self.screen = self.display.set_mode((self.width, self.height))
+        self.display.set_caption('Flappy Bird')
 
+        self.fps = 33*num # 定义游戏的fps
+        self.clock = self.display.clock  # 游戏时钟
         self.background, self.base, self.player, self.scoreboard = self.create()
         self.control, self.state = self.register()
-        self.get_event = get_event
+
+        self.get_event = self.display.get_event
 
     def create(self):
         """
         :return: 创建游戏各元素
         """
         background = Element("assets/sprites/background-black.png")
-        base = BaseElement("assets/sprites/base.png", 0, self.height * 0.79, False, background.image.get_width())
+        base = BaseElement("assets/sprites/base.png", 0, self.height * 0.79, False, self.width)
         player = PlayElement(int(self.width*0.2), int(self.height / 2), base.y)
         scoreboard = ScoreElement(self.width // 2, base.y)
         return background, base, player, scoreboard
@@ -75,8 +61,7 @@ class Game:
             self.draw_element(elem)
 
     def frame_step(self, actions):
-        pygame.event.pump()
-
+        # pygame.event.pump()
         self.state[0] = self.player.y < 0    # 小鸟到达边缘游戏借宿，state第一个标志位为游戏结束标志
         state = self.control.notify(actions)    # 根据动作更新state
         self.state = np.logical_or(self.state, state)
@@ -88,19 +73,19 @@ class Game:
         reward = max(reward, int(state[-1])) if not terminal else reward    # state第三个标志位表示分数是否增加
 
         self.draw()     # 绘制游戏界面
-        image_data = pygame.surfarray.array3d(pygame.display.get_surface())
-        pygame.display.update()
+
+        self.display.update()
         self.clock.tick(self.fps)
+        image_data = convert_data(self.display.get_surface())
         return image_data, reward, int(terminal)
 
 
 if __name__ == '__main__':
     game = Game()
     while True:
+
         action_ind = 0
-        action_ind = game.get_event(action_ind)
-        action = np.zeros(2)
-        action[action_ind] = 1
+        action = game.get_event(action_ind)
         game.frame_step(action)
 
 

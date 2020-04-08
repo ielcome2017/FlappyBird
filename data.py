@@ -20,8 +20,8 @@ def convert(img):
 class Memory:
     def __init__(self):
         self.time_step = 4
-        self.max_length = 5000
-        self.head, self.next = self.time_step, self.time_step - 1
+        self.max_length = 50000
+        self.head, self.next = self.time_step, 0
         self.memory = np.empty(self.max_length,
                                dtype=[("image", np.float, IMAGE_SHAPE), ("art", np.float, [4])])
 
@@ -39,7 +39,7 @@ class GameMemory(Memory):
         self.flag = flag
 
         self.explore = 3000000
-        self.observer = 800
+        self.observer = 10000
 
         self.image_shape = (80, 80)
         self.pre_step_epoch = 10000
@@ -84,11 +84,9 @@ class GameMemory(Memory):
                 epsilon -= (init_epsilon - final_epsilon) / self.explore
                 count += 1
 
-                action_ind = game.get_event(action_ind)     # 游戏中事件触发
-                action = np.zeros(2)
-                action[action_ind] = 1
+                action = game.get_event(action_ind)     # 游戏中事件触发
                 image, reward, terminal = game.frame_step(action)
-                image = convert(image)  # 80*80
+                image = convert(image)  # 80*8140
 
                 self.memory_append(image, [*action, reward, terminal])
 
@@ -118,3 +116,4 @@ class GameMemory(Memory):
             out = self.func(next_state).max(-1)
             batch_y = reward + gamma * out * (1 - terminal)
             yield [current_state, action], batch_y
+            # yield current_state, next_state, action, reward, terminal

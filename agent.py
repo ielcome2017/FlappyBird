@@ -1,10 +1,10 @@
 import numpy as np
 import sys
 import cv2
-import pygame
 import random
 
-from play import Game
+from play import Game, GameOver
+# from play_qt import Game
 
 IMAGE_SHAPE = (80, 80)
 
@@ -18,8 +18,8 @@ def convert(img):
 class Memory:
     def __init__(self):
         self.time_step = 4
-        self.max_length = 10000
-        self.head, self.next = self.time_step, self.time_step - 1
+        self.max_length = 50000
+        self.head, self.next = self.time_step, 0
         self.memory = np.empty(self.max_length,
                                dtype=[("image", np.float, IMAGE_SHAPE), ("art", np.float, [4])])
 
@@ -29,10 +29,6 @@ class Memory:
         self.next = self.next + 1
         self.head += 1 if self.next > self.max_length else 0
 
-    def get_state(self):
-        idx = (self.next - np.arange(self.time_step)) % self.max_length
-        return self.memory["image"][idx]
-
 
 class GameMemory(Memory):
     def __init__(self, func, count, flag="finetune"):
@@ -41,15 +37,15 @@ class GameMemory(Memory):
         self.flag = flag
 
         self.explore = 3000000
-        self.observer = 800
+        self.observer = 200
 
         self.image_shape = (80, 80)
         self.pre_step_epoch = 10000
         super().__init__()
 
-    def display(self):
+    def show(self):
         for _ in self.next_data():
-            pass
+            yield _
 
     def next_data(self):
         # 参数设置
@@ -61,6 +57,7 @@ class GameMemory(Memory):
         # game = GameState()
         action = np.array([1, 0])
         image, reward, terminal = game.frame_step(action)
+
         image = convert(image)
         for _ in range(4):
             self.memory_append(image, [*action, reward, terminal])
@@ -87,9 +84,8 @@ class GameMemory(Memory):
                 epsilon = np.clip(epsilon, a_max=init_epsilon, a_min=final_epsilon)
                 count += 1
 
-                action_ind = game.get_event(action_ind)     # 游戏中事件触发
-                action = np.zeros(2)
-                action[action_ind] = 1
+                action = game.get_event(action_ind)     # 游戏中事件触发
+
                 image, reward, terminal = game.frame_step(action)
                 image = convert(image)  # 80*80
 
@@ -98,7 +94,7 @@ class GameMemory(Memory):
                 if data is not None:
                     yield data
 
-        except pygame.error:
+        except GameOver:
             print("\n================> game close <=================")
 
     def batch_data(self, batch_size=32):
@@ -121,4 +117,5 @@ class GameMemory(Memory):
         action, reward, terminal = art[:, 0:2], art[:, -2], art[:, -1]
         out = self.func(next_state).max(-1)
         batch_y = reward + gamma * out * (1 - terminal)
-        return [current_state, action], batch_y
+        # return [current_state, action], batch_y
+        return current_state, next_state, action, reward, terminal
