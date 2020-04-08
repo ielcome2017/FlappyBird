@@ -53,7 +53,7 @@ class GameMemory(Memory):
         action_dim = 2
         # 初始化
         num = 40 if self.flag in ["explore", "train"] else 1
-        game = Game(num)
+        game = Game(num)    # game为环境
 
         action = np.array([1, 0])
         image, reward, terminal = game.frame_step(action)
@@ -76,7 +76,7 @@ class GameMemory(Memory):
                     state = self.memory["image"][idx]
 
                     state = np.transpose(state[np.newaxis, :, :], [0, 2, 3, 1])
-                    action_ind = self.func(state).argmax(-1).astype("int")[0]
+                    action_ind = self.func(state).argmax(-1).astype("int")[0]   # 智能体产生动作
 
                 epsilon -= (init_epsilon - final_epsilon) / self.explore
                 epsilon = np.clip(epsilon, a_max=init_epsilon, a_min=final_epsilon)
@@ -84,7 +84,7 @@ class GameMemory(Memory):
 
                 action = game.get_event(action_ind)     # 游戏中事件触发
 
-                image, reward, terminal = game.frame_step(action)
+                image, reward, terminal = game.frame_step(action)   # 环境的激励
                 image = convert(image)  # 80*80
 
                 self.memory_append(image, [*action, reward, terminal])

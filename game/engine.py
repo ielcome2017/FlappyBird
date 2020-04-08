@@ -1,6 +1,6 @@
 import numpy as np
 # 设置引擎后端 pyqt5
-backen = "" #"pygame"
+backen = "pygame"
 
 if backen == "pygame":
     import pygame

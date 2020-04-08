@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd6c885b-a725-4e13-bf27-08346849103f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/picture/RL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picture/bird.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picture/flappybird.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picture/param.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/picture/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/engine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -68,40 +74,18 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/game/_element.py" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Project\FlappyBird\game" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\FlappyBird\picture" />
       <recent name="D:\Project\FlappyBird\model" />
       <recent name="D:\Project\FlappyBird" />
       <recent name="D:\Project\FlappyBird\game" />
       <recent name="D:\Project\FlappyBird\NETV2" />
-      <recent name="D:\Project\FlappyBird\NETV1" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\FlappyBird\game" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="agent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FlappyBird" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/agent.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="ckpt2h5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FlappyBird" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -190,20 +174,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FlappyBird" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\Project\FlappyBird\picture\test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.agent" />
       <item itemvalue="Python.play" />
       <item itemvalue="Python.gan" />
       <item itemvalue="Python.ckpt2h5" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.play" />
         <item itemvalue="Python.ckpt2h5" />
         <item itemvalue="Python.gan" />
-        <item itemvalue="Python.agent" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +245,8 @@
       <workItem from="1586269073996" duration="1270000" />
       <workItem from="1586318493802" duration="5299000" />
       <workItem from="1586325452112" duration="684000" />
-      <workItem from="1586326456976" duration="885000" />
+      <workItem from="1586326456976" duration="12391000" />
+      <workItem from="1586342066855" duration="465000" />
     </task>
     <task id="LOCAL-00001" summary="懒得写">
       <created>1584892537914</created>
@@ -262,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585574686098</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="合并到主分支">
+      <created>1586327510034</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586327510034</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +284,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="懒得写" />
-    <option name="LAST_COMMIT_MESSAGE" value="懒得写" />
+    <MESSAGE value="合并到主分支" />
+    <option name="LAST_COMMIT_MESSAGE" value="合并到主分支" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Inspections" timestamp="1585191251526">
@@ -301,10 +316,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="668" y="132" key="#main/0.0.1920.1040@0.0.1920.1040" timestamp="1585743660834" />
-    <state x="598" y="113" key="CommitChangelistDialog2" timestamp="1586326335014">
+    <state x="598" y="113" key="CommitChangelistDialog2" timestamp="1586342551817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586326335014" />
+    <state x="598" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586342551817" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1586098274738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -313,22 +328,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586098136049" />
-    <state width="1877" height="300" key="GridCell.Tab.0.bottom" timestamp="1586327334982">
+    <state width="1877" height="418" key="GridCell.Tab.0.bottom" timestamp="1586342056191">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586327334982" />
-    <state width="1877" height="300" key="GridCell.Tab.0.center" timestamp="1586327334982">
+    <state width="1877" height="418" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586342056191" />
+    <state width="1877" height="418" key="GridCell.Tab.0.center" timestamp="1586342056191">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586327334982" />
-    <state width="1877" height="300" key="GridCell.Tab.0.left" timestamp="1586327334982">
+    <state width="1877" height="418" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586342056191" />
+    <state width="1877" height="418" key="GridCell.Tab.0.left" timestamp="1586342056191">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586327334982" />
-    <state width="1877" height="300" key="GridCell.Tab.0.right" timestamp="1586327334982">
+    <state width="1877" height="418" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586342056191" />
+    <state width="1877" height="418" key="GridCell.Tab.0.right" timestamp="1586342056191">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586327334982" />
+    <state width="1877" height="418" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586342056191" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1586146785469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -349,14 +364,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="813" y="242" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586325388893" />
-    <state x="802" y="155" key="SettingsEditor" timestamp="1586149761860">
+    <state x="802" y="155" key="SettingsEditor" timestamp="1586341610790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="802" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586149761860" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586325917968">
+    <state x="802" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586341610790" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586342565571">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586325917968" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586342565571" />
     <state x="725" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1586318706757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -365,10 +380,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586146058001" />
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586325453089">
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586342068119">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586325453089" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586342068119" />
     <state x="575" y="135" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585056892899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -389,20 +404,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="162" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584965154191" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586325810534">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586330241719">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586325810534" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586330241719" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FlappyBird$gan.coverage" NAME="gan Coverage Results" MODIFIED="1586156198149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FlappyBird$test.coverage" NAME="test Coverage Results" MODIFIED="1586318989039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlappyBird$test.coverage" NAME="test Coverage Results" MODIFIED="1586340572785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FlappyBird$agent.coverage" NAME="agent Coverage Results" MODIFIED="1586144439167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FlappyBird$play__1_.coverage" NAME="play (1) Coverage Results" MODIFIED="1586146676711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FlappyBird$play.coverage" NAME="play Coverage Results" MODIFIED="1586320119737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FlappyBird$a.coverage" NAME="a Coverage Results" MODIFIED="1585991659544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FlappyBird$_play.coverage" NAME="_play Coverage Results" MODIFIED="1585993500734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FlappyBird$main.coverage" NAME="main Coverage Results" MODIFIED="1586327334974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlappyBird$main.coverage" NAME="main Coverage Results" MODIFIED="1586342070212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FlappyBird$net.coverage" NAME="net Coverage Results" MODIFIED="1585797261307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FlappyBird$play_qt.coverage" NAME="play_qt Coverage Results" MODIFIED="1586147859344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
