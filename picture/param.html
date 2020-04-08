@@ -1,0 +1,94 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Layer (type)</th>
+      <th>Input Shape</th>
+      <th>Kernel</th>
+      <th>stride</th>
+      <th>Output Shape</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>input_state</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>(None, 80, 80, 4)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>input_action</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>(None, 2)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>卷积(conv)</td>
+      <td>(None, 80, 80, 4)</td>
+      <td>(8, 8, 4, 32)</td>
+      <td>4</td>
+      <td>(None, 20, 20, 32)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>池化(pool)</td>
+      <td>(None, 20, 20, 32)</td>
+      <td></td>
+      <td>2</td>
+      <td>(None, 10, 10, 32)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>卷积(conv)</td>
+      <td>(None, 20, 20, 32)</td>
+      <td>(4, 4, 32, 64)</td>
+      <td>2</td>
+      <td>(None, 5, 5, 64)</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>卷积(conv)</td>
+      <td>(None, 5, 5, 64)</td>
+      <td>(3, 3, 64, 64)</td>
+      <td>1</td>
+      <td>(None, 5, 5, 64)</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>flatten</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>(None, 1600)</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>全连接(fully_connect)</td>
+      <td>1600</td>
+      <td>(1600, 512)</td>
+      <td></td>
+      <td>(None, 512)</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>全连接(fully_connect)</td>
+      <td>512</td>
+      <td>(512, 2)</td>
+      <td></td>
+      <td>(None, 2)</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>点乘(dot)</td>
+      <td>(None, 2)</td>
+      <td></td>
+      <td></td>
+      <td>(None, 1)</td>
+    </tr>
+  </tbody>
+</table>
