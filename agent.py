@@ -4,7 +4,6 @@ import cv2
 import random
 
 from play import Game, GameOver
-# from play_qt import Game
 
 IMAGE_SHAPE = (80, 80)
 
@@ -31,13 +30,13 @@ class Memory:
 
 
 class GameMemory(Memory):
-    def __init__(self, func, count, flag="finetune"):
+    def __init__(self, func, count, flag="explore"):
         self.count = count
         self.func = func
         self.flag = flag
 
         self.explore = 3000000
-        self.observer = 200
+        self.observer = 10000
 
         self.image_shape = (80, 80)
         self.pre_step_epoch = 10000
@@ -49,12 +48,13 @@ class GameMemory(Memory):
 
     def next_data(self):
         # 参数设置
-        epsilon = 0.001 if self.flag in ["finetune", "test"] else 0.1
+        epsilon = 0.001 if self.flag in ["explore", "display"] else 0.1
         init_epsilon, final_epsilon = 0.1, 0.001
         action_dim = 2
         # 初始化
-        game = Game()
-        # game = GameState()
+        num = 40 if self.flag in ["explore", "train"] else 1
+        game = Game(num)
+
         action = np.array([1, 0])
         image, reward, terminal = game.frame_step(action)
 
@@ -66,8 +66,6 @@ class GameMemory(Memory):
 
         # 获取当前状态
         count = self.count * self.pre_step_epoch
-        # state = np.stack([image for _ in range(self.time_step)])
-
         try:
             while True:
                 # 获取动作
@@ -95,12 +93,10 @@ class GameMemory(Memory):
                     yield data
 
         except GameOver:
-            print("\n================> game close <=================")
+            print("\n{}> game close <{}".format("="*10, "="*10))
 
     def batch_data(self, batch_size=32):
         gamma = 0.99
-        # 根据已经获取的长度偏移
-
         num_sample = self.next - self.head
         if num_sample < self.observer:
             sys.stdout.write("\r num of sample is : %d/%d" % (num_sample, self.observer))
@@ -117,5 +113,4 @@ class GameMemory(Memory):
         action, reward, terminal = art[:, 0:2], art[:, -2], art[:, -1]
         out = self.func(next_state).max(-1)
         batch_y = reward + gamma * out * (1 - terminal)
-        # return [current_state, action], batch_y
-        return current_state, next_state, action, reward, terminal
+        return [current_state, action], batch_y

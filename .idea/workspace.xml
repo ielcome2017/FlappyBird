@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd6c885b-a725-4e13-bf27-08346849103f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/NETV1/weight.200.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ckpt2h5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/display.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/bird-dqn-2920000" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/weight.292.h5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/element.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/element.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gan.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/engine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/play.py" beforeDir="false" afterPath="$PROJECT_DIR$/play.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,6 +239,7 @@
       <workItem from="1586269073996" duration="1270000" />
       <workItem from="1586318493802" duration="5299000" />
       <workItem from="1586325452112" duration="684000" />
+      <workItem from="1586326456976" duration="885000" />
     </task>
     <task id="LOCAL-00001" summary="懒得写">
       <created>1584892537914</created>
@@ -324,22 +313,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586098136049" />
-    <state width="1877" height="300" key="GridCell.Tab.0.bottom" timestamp="1586325438204">
+    <state width="1877" height="300" key="GridCell.Tab.0.bottom" timestamp="1586327334982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586325438204" />
-    <state width="1877" height="300" key="GridCell.Tab.0.center" timestamp="1586325438204">
+    <state width="1877" height="300" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586327334982" />
+    <state width="1877" height="300" key="GridCell.Tab.0.center" timestamp="1586327334982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586325438204" />
-    <state width="1877" height="300" key="GridCell.Tab.0.left" timestamp="1586325438204">
+    <state width="1877" height="300" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586327334982" />
+    <state width="1877" height="300" key="GridCell.Tab.0.left" timestamp="1586327334982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586325438204" />
-    <state width="1877" height="300" key="GridCell.Tab.0.right" timestamp="1586325438204">
+    <state width="1877" height="300" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586327334982" />
+    <state width="1877" height="300" key="GridCell.Tab.0.right" timestamp="1586327334982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586325438204" />
+    <state width="1877" height="300" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586327334982" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1586146785469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -413,7 +402,7 @@
     <SUITE FILE_PATH="coverage/FlappyBird$play.coverage" NAME="play Coverage Results" MODIFIED="1586320119737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FlappyBird$a.coverage" NAME="a Coverage Results" MODIFIED="1585991659544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FlappyBird$_play.coverage" NAME="_play Coverage Results" MODIFIED="1585993500734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FlappyBird$main.coverage" NAME="main Coverage Results" MODIFIED="1586325089349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlappyBird$main.coverage" NAME="main Coverage Results" MODIFIED="1586327334974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FlappyBird$net.coverage" NAME="net Coverage Results" MODIFIED="1585797261307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FlappyBird$play_qt.coverage" NAME="play_qt Coverage Results" MODIFIED="1586147859344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
