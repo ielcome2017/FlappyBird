@@ -15,6 +15,8 @@
 </body>
 
 ### 资源下载
+
+<p>
 https://download.csdn.net/download/ielcome2016/12319575
 下载完成后，将里面的内容解压到当前项目的根目录
 FlappyBird
@@ -23,6 +25,8 @@ FlappyBird
 |--|-- weight.292.h5
 |-- NETV1
 |--|-- weight.200.h5
+</p>
+
 ### 运行过程
 
 main.py中train()函数定义好网络和回调函数。

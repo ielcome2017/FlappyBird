@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd6c885b-a725-4e13-bf27-08346849103f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/param.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +193,7 @@
       <workItem from="1586342066855" duration="1898000" />
       <workItem from="1586346556820" duration="2855000" />
       <workItem from="1586351189249" duration="108000" />
-      <workItem from="1586498923600" duration="360000" />
+      <workItem from="1586498923600" duration="758000" />
     </task>
     <task id="LOCAL-00001" summary="懒得写">
       <created>1584892537914</created>
@@ -253,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586349731308</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="增加资源下载">
+      <created>1586499313214</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586499313214</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +270,8 @@
     <MESSAGE value="添加一些展示文件" />
     <MESSAGE value="添加一些展示文件，修改md" />
     <MESSAGE value="modify md" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify md" />
+    <MESSAGE value="增加资源下载" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加资源下载" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Inspections" timestamp="1585191251526">
@@ -348,10 +354,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="802" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586341610790" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586499324743">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586499506095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586499324743" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586499506095" />
     <state x="725" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1586318706757">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
