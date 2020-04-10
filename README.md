@@ -14,7 +14,15 @@
     <h2>keras强化学习——FlappyBird</h2>
 </body>
 
-
+### 资源下载
+https://download.csdn.net/download/ielcome2016/12319575
+下载完成后，将里面的内容解压到当前项目的根目录
+FlappyBird
+|--model
+|--|-- bird-dqn-2920000
+|--|-- weight.292.h5
+|-- NETV1
+|--|-- weight.200.h5
 ### 运行过程
 
 main.py中train()函数定义好网络和回调函数。
@@ -69,7 +77,7 @@ terminal表示Bird是否翻车 为1就是翻车了
 
 <center>current_reward = net.predict([current_state, action])</center>
 
-<p>最终优化current_reward与agent_reward的差，两者越小越好。</p>
+最终优化current_reward与agent_reward的差，两者越小越好。
 
 为了加快数据产生速度，开始将游戏的帧率提高，正常的fps为30，训练时调整为1000，因为游戏每一帧过去，就会训练一次，如果帧数过慢，网络训练就会陷入等待。调整后训练每一批次一万条记录，训练事件为2分50秒左右，200轮训练将近9.5到10个小时之间。
 
